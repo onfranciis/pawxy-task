@@ -1,0 +1,16 @@
+@media screen and (max-width: 350px) {
+  .result {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .left {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .nav {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawxy - Video Search</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/rwd.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <div class="heading">
+      <img
+        src="./assets/Squircle.svg"
+        alt="Pawxy Logo"
+        class="headingLogo"
+        height="50px"
+        width="50px"
+      />
+      <h1 class="headingTitle">Simple Video Search Engine</h1>
+    </div>
+
+    <div class="search">
+      <form>
+        <input
+          type="search"
+          name="q"
+          id="searchInput"
+          class="searchInput"
+          placeholder="Start searching..."
+        />
+        <button id="searchButton" class="searchButton">
+          <img
+            src="./assets/Search.svg"
+            alt="Search"
+            class="searchImage"
+            height="20px"
+            width="20px"
+          />
+        </button>
+      </form>
+    </div>
+
+    <br />
+
+    <div id="searchResults"></div>
+
+    <div id="loading">
+      <img
+        src="./assets/Squircle.svg"
+        alt="Squircle Loading"
+        height="20px"
+        width="20px"
+      />
+      <p></p>
+    </div>
+
+    <div class="nav">
+      <button id="prevCount">
+        <img
+          src="./assets/Prev.svg"
+          alt="Prev"
+          class="prev"
+          height="20px"
+          width="20px"
+        />
+        <p>Prev</p>
+      </button>
+
+      <p id="currentCount">1</p>
+
+      <button id="nextCount">
+        <p>Next</p>
+        <img
+          src="./assets/Next.svg"
+          alt="Next"
+          class="next"
+          height="20px"
+          width="20px"
+        />
+      </button>
+    </div>
+
+    <a class="searchExternal" target="_blank">
+      <img
+        src="./assets/Search.svg"
+        alt="Search"
+        class="searchImage"
+        height="20px"
+        width="20px"
+      />
+      <p>Search <span id="footerQuery"></span> on Google</p>
+    </a>
+
+    <div id="preview">
+      <div>
+        <div id="previewImage"></div>
+        <div id="text">
+          <p id="previewTitle"></p>
+          <p id="previewSubTitle"></p>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <button id="visit">Visit</button>
+        <button id="close">Close</button>
+      </div>
+    </div>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>

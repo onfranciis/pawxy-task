@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 20px 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   HEADING                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.headingLogo {
+  height: 30px;
+  width: 30px;
+}
+
+.headingTitle {
+  font-size: 20px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   SEARCH                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.search {
+  width: 90%;
+  max-width: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 6px;
+  padding: 10px;
+  margin: auto;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.searchInput {
+  width: 100%;
+  height: 30px;
+  border: none;
+  padding: 5px;
+}
+
+.searchButton {
+  background-color: transparent;
+  border: none;
+}
+
+.searchButton img {
+  height: 16px;
+  width: 16px;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   RESULT                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+#searchResults {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 20px;
+}
+
+.result {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 10px;
+  border-radius: 6px;
+  word-break: break-all;
+  padding: 10px;
+}
+
+.left {
+  height: 80px;
+  width: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+  border-radius: 8px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.resultTitle {
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   LOADING                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+#loading {
+  height: 100px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
+#loading img {
+  height: 50px;
+  width: 50px;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-delay: 0;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes loading {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                     NAV                                    */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.nav {
+  width: 100%;
+  background-color: white;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 50px;
+}
+
+.nav button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.nav button img {
+  height: 16px;
+  width: 16px;
+}
+
+#prevCount,
+#currentCount,
+#nextCount {
+  display: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.searchExternal {
+  background-color: white;
+  color: #2a8cff;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.searchExternal span {
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                   PREVIEW                                  */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+#preview {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  position: fixed;
+  top: 0;
+  overflow: scroll;
+}
+
+#previewImage {
+  height: 300px;
+  width: 100%;
+  background-color: #ececec;
+  background-image: url("../assets/Thumbnail.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-top: 50px;
+}
+
+#text {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#previewTitle {
+  color: white;
+}
+
+#previewSubTitle {
+  color: #9499a6;
+}
+.bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.bottom button {
+  color: white;
+  font-size: 14px;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+}
+
+.bottom button:hover {
+  opacity: 0.7;
+}
+
+#visit {
+  background-color: #2a8cff;
+}
+
+#close {
+  background-color: #5d6067;
+}
